@@ -1,5 +1,5 @@
 <template>
-  <div class="product-details position-relative" style="margin-top: 50px">
+  <div class="product-details position-relative">
     <v-dialog v-model="dialog" max-width="1000">
       <v-icon
         @click="dialog = false"
