@@ -7,7 +7,6 @@
       >
         {{ title }}
       </h1>
-      <a href="#" class="text-black">Shop All</a>
     </div>
     <v-container fluid v-if="!products.length">
       <v-row>
@@ -23,7 +22,9 @@
       </v-row>
     </v-container>
     <Swiper
-      :autoplay="{ delay: 3000 }"
+      :autoplay="{
+        delay: 3000,
+      }"
       :pagination="{ el: '.swiperPagination', clickable: true }"
       :modules="modules"
       slides-per-view="4"
@@ -91,7 +92,7 @@
               }}</span
             >
           </v-card-text>
-          <v-btn-toggle v-model="shownItem[i.title]">
+          <v-btn-toggle v-model="shownItem[i.title]" mandatory>
             <v-btn
               v-for="(pic, i) in i.images"
               :value="pic"

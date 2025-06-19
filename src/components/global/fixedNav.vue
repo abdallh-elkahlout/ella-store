@@ -22,7 +22,7 @@
                 <router-link
                   :to="{
                     name: 'productsCategory',
-                    params: { category: category.route, title: category.title },
+                    query: { category: category.route, title: category.title },
                   }"
                   style="color: white; text-decoration: none"
                 >

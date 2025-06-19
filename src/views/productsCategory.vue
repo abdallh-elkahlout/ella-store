@@ -1,7 +1,7 @@
 <template>
   <div class="products-category" style="padding-top: 45px">
     <h1 class="text-center mt-5" style="color: rgb(71, 71, 71)">
-      {{ $route.params.title }}
+      {{ $route.query.title }}
     </h1>
     <v-container fluid class="px-16">
       <v-card :loading="loading" elevation="2" class="pt-8">
@@ -10,6 +10,7 @@
             <v-skeleton-loader
               type="image, article, button"
             ></v-skeleton-loader>
+            v-if="selectedLang[0]"
           </v-col>
         </v-row>
         <v-row v-if="!loading">
@@ -72,7 +73,7 @@
                   }}</span
                 >
               </v-card-text>
-              <v-btn-toggle v-model="shownItem[i.title]">
+              <v-btn-toggle v-model="shownItem[i.title]" mandatory>
                 <v-btn
                   v-for="(pic, i) in i.images"
                   :value="pic"
@@ -138,13 +139,17 @@ export default {
   watch: {
     async $route() {
       this.loading = true;
-      await this.getProductsByCategory(this.$route.params.category);
+      await this.getProductsByCategory(this.$route.query.category);
       this.loading = false;
     },
   },
   async mounted() {
+    if (!this.$route.query.category) {
+      this.$router.go(-1);
+      return;
+    }
     this.loading = true;
-    await this.getProductsByCategory(this.$route.params.category);
+    await this.getProductsByCategory(this.$route.query.category);
     this.loading = false;
   },
 };

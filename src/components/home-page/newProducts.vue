@@ -5,7 +5,6 @@
         <h1 class="pl-7" style="font-weight: 800; color: black">
           New Products
         </h1>
-        <a href="#" class="text-black">Shop All</a>
       </div>
       <v-row>
         <v-col cols="7" class="pt-12" v-if="!products.length">
@@ -84,7 +83,7 @@
                     }}</span
                   >
                 </v-card-text>
-                <v-btn-toggle v-model="shownItem[i.title]">
+                <v-btn-toggle v-model="shownItem[i.title]" mandatory>
                   <v-btn
                     v-for="(pic, i) in i.images"
                     :value="pic"
@@ -114,7 +113,7 @@
                     @click="
                       $router.push({
                         name: 'productDetails',
-                        params: { productId: i.id },
+                        query: { productId: i.id },
                       })
                     "
                     >Choose Options</v-btn

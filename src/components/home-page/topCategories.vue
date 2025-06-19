@@ -11,7 +11,6 @@
         >
           Top Categories
         </h2>
-        <a href="#" class="text-black">Shop All</a>
       </div>
       <v-container fluid>
         <v-row>
