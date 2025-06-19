@@ -172,14 +172,11 @@ export default {
     addCartItems(item) {
       item.quantity = this.Quantity;
       this.btnLoading = true;
-      const wasCartEmpty = this.cartItems.length === 0;
       this.addToCart(item);
       setTimeout(() => {
         this.btnLoading = false;
         this.dialog = false;
-        if (wasCartEmpty) {
-          this.Emitter.emit("openCart");
-        }
+        this.Emitter.emit("openCart");
         this.Emitter.emit("showMsg", item.title);
       }, 1000);
     },
