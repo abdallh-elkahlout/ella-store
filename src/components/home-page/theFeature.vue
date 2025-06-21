@@ -98,4 +98,16 @@
     }
   }
 }
+
+//media
+@media (max-width: 960px) {
+  .feature {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .feature {
+    margin-bottom: 100px;
+  }
+}
 </style>

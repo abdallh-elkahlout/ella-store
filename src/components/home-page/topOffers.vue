@@ -1,7 +1,7 @@
 <template>
   <div class="top-offers pt-5" style="background-color: aliceblue">
     <v-container fluid>
-      <v-row class="feature">
+      <v-row>
         <v-col cols="12" sm="4" md="4" lg="4" class="pr-4">
           <v-hover v-slot="{ isHovering, props }">
             <div
@@ -98,17 +98,3 @@
     </v-container>
   </div>
 </template>
-
-//media
-<style lang="scss">
-@media (max-width: 960px) {
-  .feature {
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 600px) {
-  .feature {
-    margin-bottom: 100px;
-  }
-}
-</style>
