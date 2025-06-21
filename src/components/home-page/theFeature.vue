@@ -2,7 +2,7 @@
   <div class="feature">
     <v-container class="pt-8" style="height: 100px">
       <v-row>
-        <v-col cols="4">
+        <v-col cols="12" sm="6" md="4" lg="4">
           <div class="parent d-flex justify-center align-center">
             <svg
               style="width: 35px; margin-right: 15px"
@@ -24,7 +24,7 @@
             <span>Tree Shipping & Returns</span>
           </div>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="12" sm="6" md="4" lg="4">
           <div class="parent d-flex justify-center align-center second">
             <svg
               style="width: 30px; margin-right: 15px"
@@ -46,8 +46,8 @@
             <span>Lowest Price Guarantee</span>
           </div>
         </v-col>
-        <v-col cols="4">
-          <div class="parent d-flex justify-center align-center">
+        <v-col cols="12" sm="6" md="4" lg="4">
+          <div class="parent d-flex justify-center align-center theard">
             <svg
               style="width: 35px; margin-right: 15px"
               aria-hidden="true"

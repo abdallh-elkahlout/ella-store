@@ -7,6 +7,7 @@
         <h3><span>Huge Saving</span> on UHD Televisions</h3>
         <p class="hint">Sale up to 70% off on selected items</p>
         <v-btn
+          @click="$emit('scroll-To-Products')"
           variant="outlined"
           density="compact"
           height="50"

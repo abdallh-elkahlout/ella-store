@@ -1,9 +1,14 @@
 <template>
   <div class="home">
-    <bannerSection />
+    <bannerSection @scroll-To-Products="scrollToProducts" />
     <featureSection />
     <topOffers />
-    <productsComp :products="flashDeals" title="Flash Deals" titleColor="red" />
+    <productsComp
+      ref="flashDeals"
+      :products="flashDeals"
+      title="Flash Deals"
+      titleColor="red"
+    />
     <topCat />
     <newProducts :products="newProducts" />
     <qualityFetures />
@@ -57,6 +62,13 @@ export default {
   },
   methods: {
     ...mapActions(productsModule, ["getProducts", "newProducts"]),
+    scrollToProducts() {
+      if (this.$refs.flashDeals) {
+        this.$refs.flashDeals.$el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        console.error("flashDeals ref is undefined");
+      }
+    },
   },
   async mounted() {
     await this.getProducts();
