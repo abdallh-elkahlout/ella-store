@@ -2,7 +2,7 @@
   <div class="top-offers pt-5" style="background-color: aliceblue">
     <v-container fluid>
       <v-row class="feature">
-        <v-col cols="4" class="pr-4">
+        <v-col cols="12" sm="4" md="4" lg="4" class="pr-4">
           <v-hover v-slot="{ isHovering, props }">
             <div
               class="parent"
@@ -20,7 +20,7 @@
             </div>
           </v-hover>
         </v-col>
-        <v-col cols="4" class="pr-4">
+        <v-col cols="12" sm="4" md="4" lg="4" class="pr-4">
           <v-hover v-slot="{ isHovering, props }">
             <div
               class="parent"
@@ -38,7 +38,7 @@
             </div>
           </v-hover>
         </v-col>
-        <v-col cols="4" class="pr-4">
+        <v-col cols="12" sm="4" md="4" lg="4" class="pr-4">
           <v-hover v-slot="{ isHovering, props }">
             <div
               class="parent"
@@ -56,7 +56,9 @@
             </div>
           </v-hover>
         </v-col>
-        <v-col cols="6" class="mt-2">
+      </v-row>
+      <v-row>
+        <v-col cols="12" sm="6" md="6" lg="6" class="mt-2">
           <v-hover v-slot="{ isHovering, props }">
             <div
               class="parent pr-2"
@@ -74,7 +76,7 @@
             </div>
           </v-hover>
         </v-col>
-        <v-col cols="6" class="mt-2">
+        <v-col cols="12" sm="6" md="6" lg="6" class="mt-2">
           <v-hover v-slot="{ isHovering, props }">
             <div
               class="parent pl-2"
