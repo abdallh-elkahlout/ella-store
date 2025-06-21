@@ -2,6 +2,7 @@
   <div class="layout">
     <v-layout>
       <appDrawer />
+      <menuDrawer />
       <v-main
         :style="`padding-top: ${
           $route.name == 'checkOut'
@@ -25,6 +26,7 @@ import appDrawer from "@/components/global/appDrawer";
 import appNav from "@/components/global/appNav";
 import fixedNav from "@/components/global/fixedNav.vue";
 import resNav from "@/components/global/respnsiveNav.vue";
+import menuDrawer from "@/components/global/menuDrawer.vue";
 
 export default {
   data: () => ({
@@ -36,6 +38,7 @@ export default {
     appNav,
     fixedNav,
     resNav,
+    menuDrawer,
   },
   mounted() {
     this.windowWidth = window.innerWidth;
@@ -43,13 +46,6 @@ export default {
       this.windowWidth = window.innerWidth;
       console.log("Window resized to: " + this.windowWidth);
     };
-    //   window.onscroll = () => {
-    //     if (window.scrollY > 205) {
-    //       this.showFixed = true;
-    //     } else {
-    //       this.showFixed = false;
-    //     }
-    //   };
   },
 };
 </script>
