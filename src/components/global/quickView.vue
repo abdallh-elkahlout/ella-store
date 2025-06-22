@@ -3,7 +3,12 @@
     <v-dialog v-model="dialog" max-width="1000">
       <v-icon
         @click="dialog = false"
-        style="position: absolute; right: 20px; top: 20px"
+        style="
+          background-color: white;
+          position: absolute;
+          right: 20px;
+          top: 20px;
+        "
         >mdi-close</v-icon
       >
       <v-container

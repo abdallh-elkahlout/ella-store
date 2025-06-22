@@ -16,8 +16,9 @@
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="7" class="pt-12" v-else>
+        <v-col cols="12" md="8" class="pt-12" v-else>
           <Swiper
+            :breakpoints="breakPoints"
             :autoplay="{ delay: 3000 }"
             :pagination="{ el: '.swiperPagination', clickable: true }"
             :modules="modules"
@@ -25,7 +26,7 @@
             :space-between="10"
           >
             <swiper-slide v-for="i in products" :key="i.id">
-              <v-card class="pl-4 pb-5 pt-5" elevation="0">
+              <v-card class="pl-4 pb-5 pt-5 mr-2 ml-2" elevation="0">
                 <v-hover v-slot="{ isHovering, props }">
                   <div class="image-parent position-relative">
                     <img
@@ -126,7 +127,7 @@
             ></div>
           </Swiper>
         </v-col>
-        <v-col cols="5">
+        <v-col cols="12" md="5">
           <img src="@/assets/vr-banner.webp" class="width-100" alt="" />
         </v-col>
       </v-row>
@@ -147,6 +148,20 @@ export default {
   },
   data: () => ({
     shownItem: {},
+    breakPoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      580: {
+        slidesPerView: 2,
+      },
+      800: {
+        slidesPerView: 3,
+      },
+      990: {
+        slidesPerView: 3,
+      },
+    },
   }),
   methods: {
     openQuickView(product) {

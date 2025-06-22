@@ -30,6 +30,7 @@
       slides-per-view="4"
       :space-between="10"
       :navigation="true"
+      :breakpoints="breakPoints"
     >
       <swiper-slide v-for="i in products" :key="i.id">
         <v-card class="pl-4 pb-5" elevation="0">
@@ -154,6 +155,20 @@ export default {
   },
   data: () => ({
     shownItem: {},
+    breakPoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      500: {
+        slidesPerView: 2,
+      },
+      700: {
+        slidesPerView: 3,
+      },
+      990: {
+        slidesPerView: 4,
+      },
+    },
   }),
   components: {
     Swiper,

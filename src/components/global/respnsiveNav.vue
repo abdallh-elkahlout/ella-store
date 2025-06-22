@@ -19,6 +19,7 @@
           </v-col>
           <v-col cols="4" class="d-flex justify-center">
             <img
+              style="cursor: pointer"
               src="@/assets/footer-logo.webp"
               alt=""
               width="140px"
