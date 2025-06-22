@@ -16,7 +16,7 @@
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="12" md="8" class="pt-12" v-else>
+        <v-col cols="12" md="12" lg="7" class="pt-12 order-1 order-lg-0" v-else>
           <Swiper
             :breakpoints="breakPoints"
             :autoplay="{ delay: 3000 }"
@@ -127,7 +127,12 @@
             ></div>
           </Swiper>
         </v-col>
-        <v-col cols="12" md="5">
+        <v-col
+          cols="12"
+          md="12"
+          lg="5"
+          class="picture d-flex justify-center align-items-center pb-5"
+        >
           <img src="@/assets/vr-banner.webp" class="width-100" alt="" />
         </v-col>
       </v-row>
@@ -180,3 +185,13 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@media (max-width: 600px) {
+  .picture {
+    img {
+      width: 80%;
+    }
+  }
+}
+</style>
