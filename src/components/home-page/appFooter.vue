@@ -3,7 +3,7 @@
     <v-footer color="grey-lighten-3 pt-10 pl-5">
       <v-container fluid class="px-0">
         <v-row>
-          <v-col cols="3">
+          <v-col cols="12" md="3" sm="6" lg="3">
             <v-card elevation="0" color="transparent">
               <v-card-title
                 class="mb-5 px-0"
@@ -28,7 +28,7 @@
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col cols="3">
+          <v-col cols="12" md="3" sm="6" lg="3">
             <v-card elevation="0" color="transparent">
               <v-card-title
                 class="mb-5 px-0"
@@ -58,7 +58,7 @@
               >
             </v-card>
           </v-col>
-          <v-col cols="3">
+          <v-col cols="12" md="3" sm="6" lg="3">
             <v-card elevation="0" color="transparent">
               <v-card-title
                 class="mb-5 px-0"
@@ -88,7 +88,7 @@
               >
             </v-card>
           </v-col>
-          <v-col cols="3" class="pt-8">
+          <v-col cols="12" md="3" sm="6" lg="3" class="pt-8">
             <v-card elevation="0" color="transparent">
               <img src="@/assets/footer-logo.webp" alt="" />
               <v-card-text class="pt-3 pb-3 px-0" style="color: rgb(71, 71, 71)"
@@ -280,20 +280,27 @@
             </div>
           </v-col>
           <v-col cols="12">
-            <div class="parent text-center mt-7">
+            <div class="parent text-center mt-7 image">
               <img src="@/assets/cart-page-cards.webp" alt="" width="600px" />
             </div>
           </v-col>
         </v-row>
         <v-row class="pt-7 bg-white">
-          <v-col cols="6">
+          <v-col
+            cols="12"
+            md="6"
+            class="sm-order-2 d-flex justify-center justify-md-start"
+          >
             <p style="color: #686868">
               &copy; {{ new Date().getFullYear() }} Ella Demo. All Rights
               Reserved
             </p>
           </v-col>
-          <v-col cols="6">
-            <div class="master_card d-flex justify-end" style="gap: 10px">
+          <v-col cols="12" md="6" class="sm-order-1">
+            <div
+              class="master_card d-flex justify-center justify-md-end"
+              style="gap: 10px"
+            >
               <span v-for="(svg, i) in svgs" :key="i" v-html="svg"></span>
             </div>
           </v-col>
@@ -320,3 +327,13 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@media (max-width: 650px) {
+  .image {
+    img {
+      width: 90%;
+    }
+  }
+}
+</style>

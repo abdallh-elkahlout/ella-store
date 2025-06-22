@@ -2,7 +2,15 @@
   <div class="qualit_fetures py-10 bg-grey-lighten-2">
     <v-container fluid>
       <v-row>
-        <v-col v-for="card in cards" :key="card.title" class="px-2">
+        <v-col
+          cols="12"
+          md="3"
+          sm="6"
+          lg=""
+          v-for="card in cards"
+          :key="card.title"
+          class="px-2"
+        >
           <v-hover v-slot="{ isHovering, props }">
             <v-card
               style="cursor: pointer"
