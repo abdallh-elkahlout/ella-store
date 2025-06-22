@@ -14,7 +14,14 @@
       </div>
       <v-container fluid>
         <v-row>
-          <v-col cols="2" v-for="item in categories" :key="item">
+          <v-col
+            cols="6"
+            sm="4"
+            md="3"
+            lg="2"
+            v-for="item in categories"
+            :key="item"
+          >
             <v-card class="text-center" elevation="0">
               <v-hover v-slot="{ isHovering, props }">
                 <div

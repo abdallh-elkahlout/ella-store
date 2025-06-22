@@ -191,6 +191,7 @@ export default {
   .picture {
     img {
       width: 80%;
+      margin-top: 20%;
     }
   }
 }
