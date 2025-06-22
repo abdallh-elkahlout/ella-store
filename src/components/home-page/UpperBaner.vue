@@ -59,7 +59,6 @@
       .cont {
         h3 {
           font-size: 40px;
-          color: rgb(6, 219, 243, 1);
         }
         width: 500px;
         left: 0px;

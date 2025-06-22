@@ -108,6 +108,14 @@
 @media (max-width: 600px) {
   .feature {
     margin-bottom: 100px;
+    .second {
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
+    }
   }
 }
 </style>
