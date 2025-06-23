@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
     <v-layout>
-      <appDrawer />
-      <menuDrawer />
+      <appDrawer :windowWidth="windowWidth" />
+      <menuDrawer :windowWidth="windowWidth" />
       <v-main
         :style="`padding-top: ${
           $route.name == 'checkOut'

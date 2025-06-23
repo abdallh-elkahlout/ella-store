@@ -3,8 +3,8 @@
     <div class="parent">
       <img src="../../assets/banner-bg.jpg" alt="" />
 
-      <div class="cont">
-        <h3><span>Huge Saving</span> on UHD Televisions</h3>
+      <div class="cont w-100">
+        <h3 class="w-100"><span>Huge Saving</span> on UHD Televisions</h3>
         <p class="hint">Sale up to 70% off on selected items</p>
         <v-btn
           @click="$emit('scroll-To-Products')"

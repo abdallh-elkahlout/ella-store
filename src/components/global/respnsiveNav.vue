@@ -41,6 +41,8 @@
               ></path>
             </svg>
             <svg
+              cursor="pointer"
+              @click="openCart"
               viewBox="0 0 30 30"
               class="icon icon-cart ml-7"
               enable-background="new 0 0 30 30"
@@ -55,6 +57,7 @@
               </g>
             </svg>
             <v-badge
+              class="badge"
               v-if="cartItems.length > 0"
               location="left top"
               color="black"
@@ -71,9 +74,15 @@ import { mapState } from "pinia";
 import { cartStore } from "@/store/cart";
 export default {
   inject: ["Emitter"],
+  data: () => ({
+    drawer: false,
+  }),
   methods: {
     openMenu() {
       this.Emitter.emit("openMenu");
+    },
+    openCart() {
+      this.Emitter.emit("openCart");
     },
   },
   computed: {
@@ -81,3 +90,13 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.badge {
+  .v-badge__wrapper {
+    span {
+      right: calc(100% - 5px) !important;
+      bottom: calc(100% - 12px);
+    }
+  }
+}
+</style>
