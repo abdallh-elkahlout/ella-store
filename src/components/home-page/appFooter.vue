@@ -289,14 +289,14 @@
           <v-col
             cols="12"
             md="6"
-            class="sm-order-2 d-flex justify-center justify-md-start"
+            class="d-flex justify-center justify-md-start"
           >
             <p style="color: #686868">
               &copy; {{ new Date().getFullYear() }} Ella Demo. All Rights
               Reserved
             </p>
           </v-col>
-          <v-col cols="12" md="6" class="sm-order-1">
+          <v-col cols="12" md="6">
             <div
               class="master_card d-flex justify-center justify-md-end"
               style="gap: 10px"

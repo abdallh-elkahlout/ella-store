@@ -1,6 +1,6 @@
 <template>
   <div class="order-success">
-    <v-dialog v-model="dialog" width="50%" persistent>
+    <v-dialog class="dialog w-lg-50 w-md-50" v-model="dialog">
       <v-card
         class="text-center"
         style="background-color: azure; padding: 20px; border-radius: 30px"
@@ -78,3 +78,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@media (max-width: 812px) {
+  .dialog {
+    display: none;
+  }
+}
+</style>

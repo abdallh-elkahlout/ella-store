@@ -1,10 +1,10 @@
 <template>
-  <div class="sheckOut">
+  <div class="checkOut">
     <v-container fluid class="ma-0 pa-0">
       <v-row>
-        <v-col cols="7">
+        <v-col cols="12" md="6" lg="7" sm="12" class="order-1 order-md-0">
           <v-card
-            class="w-100"
+            class="w-100 pay-card"
             color="white"
             elevation="0"
             style="padding: 60px 40px 0px 120px"
@@ -212,7 +212,7 @@
             >
           </v-card>
         </v-col>
-        <v-col cols="5">
+        <v-col cols="12" md="6" lg="5" sm="12">
           <v-card
             height="100%"
             color="grey-lighten-3"
@@ -312,3 +312,19 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+@media (max-width: 599px) {
+  .checkOut {
+    .pay-card {
+      padding: 20px 20px 0px 20px !important;
+    }
+  }
+}
+@media (max-width: 959px) {
+  .checkOut {
+    .pay-card {
+      padding: 30px 40px 0px 40px !important;
+    }
+  }
+}
+</style>

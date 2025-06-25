@@ -15,7 +15,10 @@
         </v-row>
         <v-row v-if="!loading">
           <v-col
-            cols="3"
+            cols="12"
+            sm="6"
+            md="4"
+            lg="3"
             class="px-5"
             v-for="i in categoryProducts.products"
             :key="i.id"

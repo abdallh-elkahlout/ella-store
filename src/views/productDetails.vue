@@ -2,7 +2,7 @@
   <div class="product-details" style="margin-top: 50px">
     <v-container>
       <v-row>
-        <v-col cols="7">
+        <v-col cols="12" md="7">
           <img
             :src="tab ? tab : singleProduct.thumbnail"
             class="w-100"
@@ -23,7 +23,7 @@
             </v-tab>
           </v-tabs>
         </v-col>
-        <v-col cols="5" class="pt-16">
+        <v-col cols="12" md="5" class="pt-16">
           <v-skeleton-loader
             v-if="loading"
             type="article, article, article"

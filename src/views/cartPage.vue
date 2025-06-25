@@ -133,8 +133,8 @@
             </v-card-text>
           </v-col>
           <v-row>
-            <v-col cols="8" v-if="cartItems.length">
-              <v-table style="overflow-y: hidden">
+            <v-col cols="12" lg="8" v-if="cartItems.length">
+              <v-table class="table" style="overflow-y: hidden">
                 <thead class="pl-5">
                   <tr>
                     <th>Product</th>
@@ -147,12 +147,12 @@
                   <tr v-for="item in cartItems" :key="item.id">
                     <td class="pl-0">
                       <v-row class="align-center">
-                        <v-col cols="5">
+                        <v-col>
                           <img :src="item.thumbnail" class="w-100" alt="" />
                         </v-col>
                         <v-col cols="7">
                           <v-card-title
-                            class="px-0"
+                            class="px-0 title"
                             style="
                               white-space: pre-wrap;
                               font-size: 14px;
@@ -161,7 +161,7 @@
                             >{{ item.title }} Sample -
                             {{ item.category }}</v-card-title
                           >
-                          <v-card-text class="px-0" style="color: #6f6f6f"
+                          <v-card-text class="px-0 title" style="color: #6f6f6f"
                             >Catergory: {{ item.category }}</v-card-text
                           >
                         </v-col>
@@ -233,7 +233,7 @@
                 </tbody>
               </v-table>
             </v-col>
-            <v-col cols="4" v-if="cartItems.length">
+            <v-col cols="12" lg="4" v-if="cartItems.length">
               <v-card elevation="0">
                 <v-card-title style="font-size: 15px; font-weight: 700"
                   >ORDER SUMMARY</v-card-title
@@ -358,7 +358,7 @@
               </v-card>
             </v-col>
           </v-row>
-          <v-col cols="12" v-if="cartItems.length">
+          <v-col cols="12" lg="4" md="6" sm="6" v-if="cartItems.length">
             <v-card-text
               style="color: #6f6f6f; gap: 10px"
               v-if="cartItems.length"
@@ -388,7 +388,7 @@
             <img
               src="@/assets/cart-page-cards.webp"
               alt=""
-              style="width: 400px"
+              style="width: 100%"
             />
           </v-col>
         </v-card>
@@ -430,3 +430,10 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+@media (max-width: 767px) {
+  table {
+    width: 800px !important;
+  }
+}
+</style>
